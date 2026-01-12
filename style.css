@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  /* primary colors */
+  --color--red--400: hsl(0, 100%, 74%);
+  --color--green--400: hsl(154, 59%, 51%);
+
+  /* accent colors */
+  --color--purple--700: hsl(248, 32%, 49%);
+
+  /* neutral colors */
+  --color--gray--900: hsl(249, 10%, 26%);
+  --color--purple--350: hsl(246, 25%, 77%);
+
+  /* typography */
+  --font-size: 16px;
+  --font-family-poppins: "Poppins", sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--font-size);
+  font-family: var(--font-family-poppins);
+  font-weight: var(--font-weight-regular);
+
+  background-image: url("./images/bg-intro-desktop.png");
+  background-size: cover;
+  background-color: var(--color--red--400);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  max-width: 1175px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.left {
+  color: #fff;
+  margin-right: 50px;
+  max-width: 500px;
+}
+
+.title {
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 20px;
+  line-height: 1.2;
+  font-size: 3rem;
+}
+
+.description {
+  word-wrap: break-word;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 500px;
+}
+
+.trial {
+  background-color: var(--color--purple--700);
+  color: #fff;
+  padding: 15px 100px;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 0 hsla(249, 10%, 26%, 0.3);
+  font-size: 0.8rem;
+  text-align: center;
+  font-weight: var(--font-weight-bold);
+}
+
+.trial span {
+  font-weight: var(--font-weight-regular);
+  color: hsla(0, 0%, 100%, 0.761);
+}
+
+form {
+  background-color: #fff;
+  width: 100%;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 5px 0 hsla(249, 10%, 26%, 0.3);
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input {
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid var(--color--purple--350);
+  outline: none;
+}
+
+form input::placeholder {
+  color: rgba(62, 60, 73, 0.7);
+}
+
+form input {
+  color: var(--color--gray--900);
+  font-weight: var(--font-weight-bold);
+}
+
+form input:focus {
+  border: 1.5px solid var(--color--purple--700);
+}
+
+label {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.claim {
+  background-color: var(--color--green--400);
+  color: #fff;
+  padding: 15px;
+  outline: none;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 5px 0 hsla(154, 57%, 42%, 0.926);
+  cursor: pointer;
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+.claim:hover {
+  background-color: hsla(154, 59%, 51%, 0.8);
+}
+
+.terms {
+  color: hsla(249, 10%, 26%, 0.3);
+  font-weight: var(--font-weight-bold);
+  font-size: 0.6rem;
+  text-align: center;
+}
+
+.error{
+  color: var(--color--red--400);
+ font-size: 0.6rem;
+ font-weight: var(--font-weight-medium);
+}
+
+input:has(+ .error) {
+  border: 1.5px solid var(--color--red--400);
+  background-image: url('./images/icon-error.svg');
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  background-size: 20px 20px;
+  padding-left: 40px;
+}
+
+.terms span {
+  color: var(--color--red--400);
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 100px;
+    padding-inline: 20px;
+  }
+
+    .left {
+    margin-right: 0;
+    text-align: center;
+  }
+  .right {
+    min-width: 0;
+    margin-block: 50px;
+  }
+
+  .trial {
+    padding: 15px 50px;
+
+    word-wrap: break-word;
+  }
+  .description {
+    text-align: center;
+    word-wrap: break-word;
+    text-wrap: balance; ;
+    overflow-wrap: break-word ;
+  }
+
+
+}
+
+@media screen and (max-width: 640px) {
+  .title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .description{
+    line-height: 1.5;
+  }
+}
+@media screen and (max-width: 376px) {
+  body {
+    background-image: url("./images/bg-intro-mobile.png");
+  }
+
+  .trial{
+    padding: 15px 80px;
+  }
+
+  .terms{
+    padding-inline: 21px;
+  }
+}
