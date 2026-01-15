@@ -1,95 +1,202 @@
-# Frontend Mentor - Intro component with sign up form
+# 📝 Intro Component with Sign-Up Form
 
-![Design preview for the Intro component with sign up form coding challenge](preview.jpg)
+A responsive sign-up form with real-time validation built with vanilla JavaScript.
 
-## Welcome! 👋
+## 🚀 [Live Demo](#)
 
-Thanks for checking out this front-end coding challenge.
+![Form Validation Screenshot](screenshot-url)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## 🎯 Project Purpose
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
+**What**: A sign-up form with client-side validation that provides instant feedback to users. The form validates all input fields for empty values and checks email format using HTML5's built-in validation API.
 
-## The challenge
+**Why**: Throughout my frontend development journey, I realized I had never built a proper form validation project. This was the perfect opportunity to fill that gap and gain hands-on experience with form handling and validation in JavaScript.
 
-Your challenge is to build out this introductory component and get it looking as close to the design as possible.
+**Learning Goals**:
+- Master form validation techniques in vanilla JavaScript
+- Understand the HTML5 Constraint Validation API
+- Practice real-time user feedback with event listeners
+- Work with DOM manipulation for dynamic error messages
+- Explore modern CSS selectors like `:has()`
+- Build accessible forms with proper labeling
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+## 🛠️ Built With
 
-Your users should be able to:
+- HTML5 (Semantic markup, Form validation attributes)
+- CSS3 (Custom properties, Flexbox, Media queries)
+- Vanilla JavaScript (ES6+)
+- HTML5 Constraint Validation API
 
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Receive an error message when the `form` is submitted if:
-  - Any `input` field is empty. The message for this error should say _"[Field Name] cannot be empty"_
-  - The email address is not formatted correctly (i.e. a correct email address should have this structure: `name@host.tld`). The message for this error should say _"Looks like this is not an email"_
+## ✨ Features
 
-Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+- ✅ Real-time form validation
+- ✅ Empty field detection for all inputs
+- ✅ Email format validation using `checkValidity()`
+- ✅ Dynamic error message insertion and removal
+- ✅ Error messages disappear as users type
+- ✅ Visual error indicators (red borders, error icons)
+- ✅ Accessible form with hidden labels for screen readers
+- ✅ Fully responsive design (mobile to desktop)
+- ✅ Clean, modern UI with smooth interactions
+- ✅ Hover states for interactive elements
 
-## Where to find everything
+## 💭 Development Journey
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design.
+### Wins
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`.
+This project was a walk in the park! Everything came together smoothly because I had already done the groundwork - I'd read about form validation on MDN docs before attempting this project, so I knew exactly what I needed to do.
 
-If you would like the Figma design file to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+The biggest win? **I completed this entire project on my own without any outside help.** That's a moment worth celebrating! I'm patting myself on the back because this is when I truly started feeling like a real programmer. When you can read documentation, understand concepts, and implement them independently, that's when you know you're making real progress.
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+Using the `:has()` CSS selector was also a pleasant surprise. I had read about it earlier and never imagined I'd use it so soon. Seeing it work perfectly for styling inputs with errors felt like discovering a superpower.
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+### Challenges & Solutions
 
-## Building your project
+**"Challenge"**: There weren't really any challenges with this project.
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+**Why**: I had already read the MDN documentation on form validation and the `checkValidity()` method before starting. When you prepare by reading documentation first, implementation becomes straightforward. This project reinforced an important lesson: **documentation is your friend, and reading ahead pays off.**
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+### Key Learnings
 
-## Deploying your project
+1. **Form Validation with JavaScript**: I learned how to validate forms using JavaScript's built-in methods rather than writing complex regex patterns from scratch. The `checkValidity()` method makes email validation incredibly simple and reliable.
 
-As mentioned above, there are many ways to host your project for free. Our recommended hosts are:
+2. **HTML5 Constraint Validation API**: Understanding that browsers have built-in validation capabilities was eye-opening. The `novalidate` attribute lets me disable browser defaults so I can create custom validation feedback.
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+3. **Event Listeners - `submit` vs `input`**: I learned the difference between form submission validation and real-time validation. The `submit` event checks everything when the user tries to submit, while `input` events provide instant feedback as users type.
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+4. **Dynamic DOM Manipulation**: Creating error elements with `createElement()`, inserting them with `.after()`, and removing them with `.remove()` gave me more confidence in manipulating the DOM programmatically.
 
-## Create a custom `README.md`
+5. **The `:has()` CSS Selector**: This was my first time using this powerful modern CSS feature! The selector `input:has(+ .error)` allows me to style an input based on whether it has an error message sibling. This eliminates the need for adding/removing classes on the input itself.
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+6. **Accessibility Best Practices**: I learned about hiding labels visually while keeping them accessible for screen readers. This maintains good UX design while not compromising accessibility.
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+7. **Event Delegation and Setup Functions**: Creating a `setupInputListeners()` function to attach event listeners to all inputs taught me about organizing code for scalability and reusability.
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+### Code I'm Proud Of
 
-## Submitting your solution
+```javascript
+function setupInputListeners() {
+  const input = document.querySelectorAll("input");
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+  input.forEach((input) => {
+    input.addEventListener("input", () => {
+      const existingError = input.nextElementSibling;
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+      if (existingError && existingError.classList.contains("error")) {
+        existingError.remove();
+      }
+    });
+  });
+}
+```
 
-## Sharing your solution
+**Why this matters**: This function sets up real-time feedback for all form inputs. As soon as users start typing after seeing an error, the error message disappears. This creates a smooth, forgiving user experience. The function is reusable and automatically works with any number of inputs.
 
-There are multiple places you can share your solution:
+```javascript
+function isEmailValid(email){
+    const isValid = email.checkValidity();
 
-1. Share your solution page in the **#finished-projects** channel of the [community](https://www.frontendmentor.io/community).
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+    if(!isValid){
+        setError(email, "Looks like this is not an email");
+        return false;
+    }
+    return true;
+}
+```
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback.
+**Why this matters**: Instead of writing complex regex patterns for email validation, I'm using the browser's built-in `checkValidity()` method. This is more reliable because it follows the HTML5 email validation standards. It's a perfect example of leveraging what's already available rather than reinventing the wheel.
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+```css
+input:has(+ .error) {
+  border: 1.5px solid var(--color--red--400);
+  background-image: url('./images/icon-error.svg');
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  background-size: 20px 20px;
+  padding-left: 40px;
+}
+```
 
-## Got feedback for us?
+**Why this matters**: The `:has()` selector is a game-changer! This single CSS rule automatically styles any input that has an error message next to it - no JavaScript class manipulation needed. I had read about this selector earlier and was excited to finally use it in a real project.
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi@frontendmentor.io.
+## 📄 What's Next
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+- [ ] **Recreate this project using React** - Apply these validation concepts with React hooks and state management
+- [ ] Add password strength indicator with visual feedback
+- [ ] Implement more advanced validation rules (minimum length, special characters)
+- [ ] Add success states and messages after successful submission
+- [ ] Create custom regex patterns for phone number validation
+- [ ] Add "show/hide password" toggle functionality
+- [ ] Implement multi-step form validation
 
-**Have fun building!** 🚀
+## 🚦 Run Locally
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/form-validation.git
+
+# Navigate to folder
+cd form-validation
+
+# Open in browser
+# Just double-click index.html or use Live Server in VS Code
+```
+
+## 📂 File Structure
+
+```
+form-validation/
+├── images/              # Icons and background images
+│   ├── bg-intro-desktop.png
+│   ├── bg-intro-mobile.png
+│   ├── icon-error.svg
+│   └── favicon-32x32.png
+├── index.html           # Form structure with semantic HTML  ──
+├── style.css            # Responsive styling with CSS variables ├
+├── script.js            # Validation logic and event handlers
+└── README.md
+```
+
+## 📚 Resources That Helped Me
+
+- [MDN Web Docs - Form Validation](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation) - Read this before starting the project
+- [MDN - checkValidity()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/checkValidity) - Understanding browser validation
+- [MDN - :has() Selector](https://developer.mozilla.org/en-US/docs/Web/CSS/:has) - Learning about this powerful CSS selector
+- [Frontend Mentor](https://www.frontendmentor.io) - For the design challenge and specifications
+- [MDN - Constraint Validation API](https://developer.mozilla.org/en-US/docs/Web/API/Constraint_validation) - Deep dive into HTML5 validation
+
+## 🤔 Reflections
+
+**Compared to My Other Projects**: This was a fairly easy project compared to others I've built. The concepts weren't new - I've worked with event listeners, DOM manipulation, and CSS styling many times before. What was new was applying these skills specifically to form validation.
+
+**What Got Easier**: Reading documentation and implementing concepts independently has become second nature. I didn't need help from AI or tutorials during this build. I just read the MDN docs, understood the concepts, and built it. That's real progress.
+
+**The Power of Preparation**: This project taught me that **reading documentation before coding is a superpower**. Because I had studied form validation concepts beforehand, implementation was straightforward. There's no substitute for understanding the fundamentals.
+
+**Confidence Boost**: Completing this project entirely on my own felt amazing. It's one thing to build projects with help; it's another to do it independently. This is when I started feeling like a real programmer - not because the project was complex, but because I handled it confidently from start to finish.
+
+**What's Still Challenging**: Nothing specific with this project, but I'm excited to see how form validation works in React. Managing form state and validation in a component-based architecture will be an interesting challenge.
+
+**Next Steps**: I'm planning to recreate this form using React to understand how validation works with hooks like `useState` and how to handle form state in a more complex application. The goal is to take what I've learned here and apply it in a modern framework context.
+
+## 💡 Key Takeaway
+
+**This project proved that consistent learning pays off.** Reading documentation, even when you're not actively building something, prepares you for when you need that knowledge. The time I spent on MDN docs learning about `checkValidity()`, form validation, and the `:has()` selector made this project smooth and enjoyable.
+
+More importantly, **building projects without external help is a milestone.** It's when you truly know you're growing as a developer. This project might have been relatively simple, but completing it independently was a significant confidence boost.
+
+---
+
+**Frontend Practice Project** | Frontend Mentor Challenge | 2026
+
+*Built independently with 💪 and 📚 by Akinzomedia*
+
+---
+
+## 🙏 Acknowledgments
+
+- **Frontend Mentor** for providing well-designed challenges that help developers practice real-world skills
+- **MDN Web Docs** for comprehensive, reliable documentation that every developer should read
+- **Myself** - for putting in the work, reading the docs, and building this independently! 🎉
+
+*Note: This readme was rewritten using Ai.*
