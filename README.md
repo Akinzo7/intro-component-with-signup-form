@@ -2,9 +2,9 @@
 
 A responsive sign-up form with real-time validation built with vanilla JavaScript.
 
-## 🚀 [Live Demo](#)
+## 🚀 [Live Demo](https://akinzomedia-signup-form.netlify.app/)
 
-![Form Validation Screenshot](screenshot-url)
+![Form Validation Screenshot](preview.png)
 
 ## 🎯 Project Purpose
 
